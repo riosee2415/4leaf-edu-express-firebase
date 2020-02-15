@@ -1,4 +1,14 @@
 extends layouts/main.pug
 
 block content
-    h1 Hello I'm Home!  
+    h1 Hello I'm Home!
+    form(action="/" method="post")
+        input(type="text" id="txt-js" name="txt")
+        input(type="submit" value="CHECK" id="btn-js")
+    .area
+        ul
+            each data in todoData
+                form(action="/removeTodo" method="post")
+                    input(type="hidden" name="taskId" value=`${data.id}`)
+                    li= data.task
+                        input(type="submit" value="❌")

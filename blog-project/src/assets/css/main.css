@@ -1,0 +1,17 @@
+.super {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.super .super__col-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.super .super__col-1 .super__col-1__content {
+  /* 가운데로 와야 하는 데, css 코드 모름 이슈 */
+}
